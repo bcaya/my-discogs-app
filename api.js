@@ -1,8 +1,6 @@
-
+import { myHeaders } from "./headers";
 export async function getRecords(id) {
-    const myHeaders = new Headers();
-myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
-myHeaders.append("User-Agent", "PostmanDiscogs/1.0");
+
 
 const requestOptions = {
   method: "GET",
@@ -11,8 +9,8 @@ const requestOptions = {
 };
 
 try {
-  const response = await fetch(`https://api.discogs.com/releases/${id}?current_abbr=US`, requestOptions);
-  const result = await response.text();
+  const response = await fetch(`https://api.discogs.com/masters/${id}`, requestOptions);
+  const result = await response.json();
   return result
 } catch (error) {
   console.error(error);

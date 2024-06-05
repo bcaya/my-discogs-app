@@ -5,6 +5,7 @@ import './assets/StylesMain.jsx'
 export default function Records(){
   const [records, setRecords] = React.useState([]);
   const [filteredRecords, setFilteredRecords] = React.useState([]);
+  const [masterId, setMasterId] = React.useState(null)
   const [pagination, setPagination] = React.useState({});
   const [query, setQuery] = React.useState('');
   React.useEffect(() => {
@@ -19,6 +20,7 @@ export default function Records(){
       });
       const data = await response.json();
       setRecords(data.releases);
+     
       setFilteredRecords(data.releases)
     
       setPagination(data.pagination)
@@ -26,6 +28,7 @@ export default function Records(){
 
     fetchRecords();
   }, []);
+  
   
   function handleChange(e) {
     setQuery(e.target.value);
@@ -58,8 +61,8 @@ export default function Records(){
 <box-l padding="var(--s0)" key={record.id}>
   
  <div>
-  <Link to={`${record.id}`} state={{
-    id: record.id,
+  <Link to={`${record.basic_information.master_id}`} state={{
+    
     recordObj: record.basic_information
   }}>
   <frame-l ratio="1:1"><img src={record.basic_information.cover_image} alt={record.basic_information.title}/></frame-l>
