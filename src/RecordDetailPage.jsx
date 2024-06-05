@@ -69,7 +69,7 @@ export default function RecordDetailPage(){
         </box-l>
         <box-l>
           <h3>Album Notes</h3>
-          <p>{record}</p>
+        
         </box-l>
       </stack-l>
     </box-l>)
