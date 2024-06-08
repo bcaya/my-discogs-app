@@ -1,11 +1,14 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
+                                                
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
   color: #FFFFFF;
   background-color: #403838;
   --color-dark: #403838;
+  --color-accent: #f2ff26;
+  --color-pink: #ffbf99;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -165,4 +168,33 @@ switcher-l > * {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* Typography */
+
+
+/* Header  */
+header .site-logo{
+ 
+  margin-right: auto;
+  font-weight: 900;
+  font-size: 2.5rem;
+  text-decoration: underline;
+  
+}
+
+a:hover {
+  
+  text-decoration: underline;
+}
+
+header {
+  height: 5rem;
+  display:flex;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+header a{
+  text-decoration: inherit;
+  padding: .4rem 1.3rem;
 }
