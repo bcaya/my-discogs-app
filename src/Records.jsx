@@ -44,7 +44,7 @@ export default function Records(){
   return(
   <box-l>
     <cluster-l justify="space-evenly" align="center">
-    <h2>My Record Collection</h2>
+    <h1>My Record Collection</h1>
     <div className="search">
 <input
     type="text"
@@ -61,10 +61,8 @@ export default function Records(){
 <box-l padding="var(--s0)" key={record.id}>
   
  <div>
-  <Link to={`${record.basic_information.master_id}`} state={{
-    
-    recordObj: record.basic_information
-  }}>
+  <Link to={`/records/${record.basic_information.master_id}`}
+        state={{recordData: record.basic_information}}>
   <frame-l ratio="1:1"><img src={record.basic_information.cover_image} alt={record.basic_information.title}/></frame-l>
   </Link>
 

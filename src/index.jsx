@@ -15,7 +15,7 @@ function App() {
           <Route  path="/" element={<Layout/>}>
             <Route index element={<Home/>}/>
            <Route path="records" element={<Records/>}/>
-            <Route path="records/:id" element={<RecordDetailPage/>}/>
+            <Route path="records/:master_id" element={<RecordDetailPage/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
