@@ -3,6 +3,7 @@ import {Link, useParams, useLocation} from 'react-router-dom'
 import { getRecords } from '../api'
 export default function RecordDetailPage(){
   const {id, recordObj} = useParams()
+
   const [error, setError] = React.useState(null)
   const [loading, setLoading] = React.useState(false)
   const [record, setRecord] = React.useState([])
@@ -26,7 +27,7 @@ export default function RecordDetailPage(){
     loadRecords()
   },[id]) 
 
-console.log(record)
+
 const recordElements = recordData.map((record) => {
     return( <stack-l key={record.id}>
       <h1>{record.artists[0].name} - {record.title}</h1>

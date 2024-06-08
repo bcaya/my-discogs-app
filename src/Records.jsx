@@ -58,13 +58,14 @@ export default function Records(){
 
 <grid-l>
 {filteredRecords.map((record) => (
+  
 <box-l padding="var(--s0)" key={record.id}>
   
  <div>
-  <Link to={`${record.basic_information.master_id}`} state={{
+  <Link to={`${record.basic_information.master_id}`} state={
     
-    recordObj: record.basic_information
-  }}>
+    {recordObj: record.basic_information.master_id}
+  }>
   <frame-l ratio="1:1"><img src={record.basic_information.cover_image} alt={record.basic_information.title}/></frame-l>
   </Link>
 
