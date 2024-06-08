@@ -10,7 +10,7 @@ export default function Records(){
   const [query, setQuery] = React.useState('');
   React.useEffect(() => {
     const fetchRecords = async () => {
-      const response = await fetch('https://api.discogs.com/users/ghostly64/collection/folders/0/releases?sort=added&page=1&per_page=50&sort_order=desc', {
+      const response = await fetch('https://api.discogs.com/users/ghostly64/collection/folders/7261507/releases?sort=added&page=1&per_page=100&sort_order=desc', {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded', 
           'User-Agent': 'PostmanDiscogs/1.0', 
