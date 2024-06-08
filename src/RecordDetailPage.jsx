@@ -33,18 +33,19 @@ export default function RecordDetailPage(){
 
   
   },[master_id]) 
-console.log(record)
 
 function RecordEl(){
-  return <box-l className={recordData.id}>
+  return <box-l key={recordData.id}>
           <Link 
       to=".." //this is a link back to the relative path aka so you can go back to what you weere prev looking at. 
       relative="path"
       className="back-button"
       >&larr; <span>Back to collection</span></Link>
+
+  <box-l padding="var(--s3)">
   <h1>{recordData.artists[0].name} - {recordData.title}</h1>
   <h6>Added to my collection on {recordData.date_added}</h6>
-  <box-l padding="var(--s3)"><frame-l ratio="1:1"><img src={recordData.cover_image}/></frame-l></box-l>
+  <frame-l ratio="1:1"><img src={recordData.cover_image}/></frame-l></box-l>
   <h5>Release year: {recordData.year}</h5>
   <box-l>
     <h3>Labels: </h3> 
@@ -78,9 +79,7 @@ function RecordEl(){
   })}
   </cluster-l>
   </box-l>
-  <reel-l itemWidth="20rem">
-  
-    </reel-l>
+
   </box-l>
 }
 

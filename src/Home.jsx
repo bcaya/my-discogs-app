@@ -7,10 +7,12 @@ export default function Home(){
   return(
     <box-l padding="var(--s4)">
       <stack-l>
+          <center-l >
           <h1>My name is Bobby, I am a <span>Full-Stack Developer</span></h1>
         <box-l>
           <p>Creating responsive and acessible websites. View my projects for more info!</p>
         </box-l>
+          </center-l>
         <box-l><div className="home-container">
         <cluster-l>
             <p>Currently available for hire</p>
